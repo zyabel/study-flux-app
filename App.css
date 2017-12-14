@@ -1,0 +1,33 @@
+* {
+  text-align: center;
+}
+
+.header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#inputText {
+  margin-bottom: 20px;
+}
+input[type='button'] {
+  margin-left: 20px;
+  padding: 0 20px;
+}
+
+.intro {
+  height: 100px;
+  width: 400px;
+  font-size: large;
+  border: 1px solid #000;
+  margin: 0 auto;
+
+}
+
+.up {
+  background: #fff;
+  color: #000;
+}
+
+
