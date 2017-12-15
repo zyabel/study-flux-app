@@ -1,5 +1,5 @@
 import React, { Component } from 'react' 
-import {Dispatcher} from 'flux' 
+import { Dispatcher } from 'flux' 
 import { EventEmitter } from 'events' 
 import './App.css' 
 
@@ -61,12 +61,15 @@ class AppStore extends EventEmitter {
   }
 
   subscribe(eventName, callback) {
-    this.on(eventName, callback)
+    this.on(eventName, callback)//use default method of eventEmmiter
   }
+
 
   unsubscribe(eventName, callback) {
     this.removeListener(eventName, callback)
   }
+
+  
 
   dispatcherCallback(action) {
     switch (action.actionType) {
@@ -112,7 +115,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Store.subscribe('ADD_DATA', this.update) 
+    Store.subscribe('ADD_DATA', this.update) //remove actionType, stayed just a this.update method
     Store.subscribe('REMOVE_DATA', this.update) 
   }
 
